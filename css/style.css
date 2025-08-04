@@ -1,0 +1,431 @@
+@charset "utf-8";
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.main_header{
+    width: 100%; height: 100px; display: flex; justify-content: flex-end; align-items: center;
+    background: #b5d4ed; position: relative;
+}
+.main_header > h1{
+    position: absolute; left: 50%; transform: translateX(-50%);
+}
+.main_header > h1 > a{
+    display: block; width: 60px; height: 60px; background: url("../images/logo.png") no-repeat;
+    background-size: contain;
+}
+.main_header > .toggle_btn{
+    width: 32px;  height: 32px;   background-color: transparent;   border: 0px none;   padding: 6px 0;
+    display: flex;   flex-direction: column;   justify-content: space-between;   align-items: center;
+    margin-right: 10px;
+}
+.main_header > .toggle_btn > span{
+    display: block;  width: 28px;   height: 2px;   background: #01375b;   border-radius: 2px;
+    transition: background-color .2s;
+}
+.main_header > .gnb{
+    position: absolute;  left: -70vw;   top: 0;   background-color: #fff;   padding: 60px 24px;
+    width: 70vw;   height: 100vh;   /* transition: left .3s; */  z-index: 9999;
+}
+.main_header > .gnb > h2{
+    width: 50px; height: 50px; background: url("../images/menulogo.png") no-repeat center center;
+    background-size: cover; text-indent: -9999px; margin-top: -40px; margin-bottom: 40px;
+}
+.main_header > .gnb > ul{  
+    display: flex;  flex-direction: column;   gap:0.875rem;
+}
+.main_header > .gnb a{
+    color: #151515;  display: block;  line-height:1.7rem;   /* rem to px converter */
+}
+.main_header > .gnb > .closeBtn{
+    border: 0px none;   background: transparent;   font-size:1.5rem;  
+    display: flex;   align-items: center;   position: absolute;   right:24px;   top:20px;
+}
+.main_header > .gnb > .closeBtn > span{   
+    font-size: 2.8rem;  line-height: 2.8rem;
+}
+
+.slide_container > .swiper > .swiper-wrapper > .swiper-slide img{
+    width: 100vw; height: 100vh; object-fit: cover;   object-position: center;
+}
+.slide_container > .swiper > .swiper-wrapper > .swiper-slide{
+    position: relative;
+}
+.slide_container > .swiper > .swiper-wrapper{
+    display: flex; flex-flow: row nowrap;
+}
+.slide_container .swiper .swiper-wrapper .swiper-slide .text_content{
+    font-family: "Bebas Neue", sans-serif; position: absolute;
+    left: 50%;   top: 50%;  transform: translate(-50%, -50%); font-weight: 700;
+    font-size: 60px; color: #3bd6ff; text-align: center;
+}
+
+.matches{
+    width: 100%; height: 100%; background: #001838;
+}
+.matches > h2{
+    color: #3bd6ff; font-family: sans-serif; font-weight: 400; font-size: 20px; padding-top: 30px; padding-left: 15px;
+    letter-spacing: 2px;
+}
+.matches > .k2 > .swiper-wrapper{
+    flex-flow: row nowrap; margin-top: 10%; 
+    position: relative; margin-bottom: 20%;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide img{
+    display: block; width: 60px; height: 60px; object-fit: cover; object-position: center;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > img{ margin-top: 10px;}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > p > img{ margin-bottom: 10px; width: 100px; height: 100px; object-fit: contain;}
+.matches > .k2 > .swiper-wrapper .swiper-slide{
+    width: 70%; height: 100%; background: transparent; border: 1px solid #3bd6ff; border-collapse: collapse;
+    display: flex; flex-direction: column; justify-content: space-between; box-sizing: border-box;
+    color: #3bd6ff; padding-left: 10px; font-family: sans-serif;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > .p1{
+    letter-spacing: -1px; font-weight: 500; font-family: "Bebas Neue", sans-serif; font-size: 20px;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .day{
+    font-size: 30px;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .vs{
+    padding-right: 20px;
+}
+.matches > .k2 > .swiper-wrapper > .swiper-slide > .p2{
+    letter-spacing: -1px; font-weight: 700; font-family: "Bebas Neue", sans-serif; font-size: 46px;
+}
+
+.news{
+    width: 100%; height: 100%; background: #b5d4ed; padding-bottom: 8%;
+}
+.news > h2{
+    font-size: 20px; padding-top: 20px; padding-left: 15px; letter-spacing: 2px; color: #001838;
+}
+.news > .news_tab{
+    width: 98%; height: 60%; margin-top: 20px; margin-left: 2%;
+}
+.news > .news_tab > div{
+    display: flex; color: #001838; background: transparent; gap: 2%; margin-top: 2%;
+    align-items: center; 
+}
+.news > .news_tab > div > a{ font-size: 12px; color: #001838; }
+.news > .news_tab > div > img{ 
+    width: 30%; height: 60%; flex-basis: 30%; aspect-ratio: 3/2; object-fit: cover; object-position: top; 
+    transition: all 0.5s; cursor: pointer;
+}
+.news > .news_tab > div > img:hover{
+    transform: scale(1.1);
+}
+
+.store{
+    width: 100%; height: 65%; padding-bottom: 30%;
+}
+.store > h2{
+    font-size: 20px; padding-top: 20px; padding-left: 15px; letter-spacing: 2px; color: #001838;
+}
+.store > .k3 > .swiper-wrapper{
+    margin-top: 10%; padding-left: 5%;
+}
+.store > .k3 > .swiper-wrapper > div{
+    width: 90%; padding-left: 4%; padding-bottom: 4%; border-right: 3px solid #b5d4ed; padding-right: 4%;
+}
+.store > .k3 > .swiper-wrapper > .mm > img{
+    width: 90%; flex-basis: 30%; aspect-ratio: 1/1; transition: all 0.5s; cursor: pointer; overflow: hidden;
+}
+.store > .k3 > .swiper-wrapper > .mm > img:hover{
+    transform: scale(1.1);
+}
+.store > .k3 > .swiper-wrapper > .mm > a{
+    display: block; padding-top: 4%; color: #001838;
+}
+
+.trophies{
+    width: 100%; height: 100%; background: #001838;
+}
+.trophies > h2{
+    font-size: 20px; padding-top: 20px; padding-left: 15px; letter-spacing: 2px; color: #3bd6ff;
+}
+.trophies > .k4 > .swiper-wrapper{
+    margin-left: 5%; padding-bottom: 20%;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2{
+    width: 80%; height: calc( 85% - 50px ); border: 1px solid #001838; background: #b5d4ed; margin-top: 10%; 
+    transition: all .5s;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2 > img{
+    display: block; width: 30%; height: 30%; margin-top: 10%; margin-left: 10%; 
+}
+.trophies > .k4 > .swiper-wrapper > .mm2 > p{
+    padding-left: 5%; font-family: "Bebas Neue", sans-serif;
+} 
+.trophies > .k4 > .swiper-wrapper > .mm2 > .league{
+    margin-top: 70%; font-size: 40px; height: 2.4em;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2 > .num{
+    padding-top: 10%; padding-bottom: 10%; font-size: 40px;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(1):hover{
+    background: url("../images/premier_mancity.png") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(2):hover{
+    background: url("../images/efl_championship_mancity.jpg") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(3):hover{
+    background: url("../images/fa_cup_mancity.jpg") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(4):hover{
+    background: url("../images/efl_cup_mancity.jpg") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(5):hover{
+    background: url("../images/community_mancity.png") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(6):hover{
+    background: url("../images/winners_cup_mancity.jpg") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(7):hover{
+    background: url("../images/uefa_champions_mancity.png") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(8):hover{
+    background: url("../images/supercup_mancity.png") no-repeat center center; background-size: cover;
+}
+.trophies > .k4 > .swiper-wrapper > .mm2:nth-child(9):hover{
+    background: url("../images/club_worldcup_mancity.jfif") no-repeat center center; background-size: cover;
+}
+
+.main_footer{
+    width: 100%; height: 100%; background: #b5d4ed;
+}
+.main_footer > .main_sponsor{
+    width: 100%; height: 20%; display: flex; flex-flow: row wrap; justify-content: center; align-items: center; background: #fff;
+}
+.main_footer > .main_sponsor > li{
+    box-sizing: border-box; width: 30%;
+}
+.main_footer > .main_sponsor > li > a{
+    box-sizing: border-box;
+}
+.main_footer > .main_sponsor > li > a > img{
+    width: 100%; height: 100%; padding-top: 10%; padding-bottom: 10%;
+}
+.main_footer > .sub_sponsor{
+    display: flex; width: 100%; height: 20%; display: flex; flex-flow: row wrap; justify-content: center; align-items: center;
+    margin-top: 5%;
+}
+.main_footer > .sub_sponsor > li{
+    width: 20%; height: 20%;
+}
+.main_footer > .sub_sponsor > li > a > img{
+    width: 100%; height: 100%;
+}
+.main_footer > .line{
+    display: block; width: 85%; height: 3px; background: #fff; margin: 5% auto;
+}
+.main_footer > .footer_menu{
+    display: flex; flex-flow: row wrap; gap: 10%; padding-top: 10%; padding-left: 5%; padding-right: 5%; margin: 0px auto;
+}
+.main_footer > .footer_menu > ul{
+    font-family: "Bebas Neue", sans-serif; width: 45%; 
+}
+.main_footer > .footer_menu > .bottom{
+    padding-top: 10%;
+}
+.main_footer > .footer_menu > ul > h3{
+    font-size: 26px; color: #001838;
+}
+.main_footer > .footer_menu > ul > li{
+    padding-top: 5%;
+}
+.main_footer > .footer_menu > ul > li > a{
+    color: #000080;
+}
+.main_footer > .footer_menu > .sns{
+    padding-top: 10%; 
+}
+.main_footer > .footer_menu > .sns > h3{
+    font-family: "Bebas Neue", sans-serif; color: #001838; font-size: 26px;
+}
+.main_footer > .footer_menu > .sns > .sns_list{
+    padding: 5% 0px; display: flex; flex-flow: row wrap; align-items: center; gap: 3%;
+}
+.main_footer > .footer_menu > .sns > .sns_list > li > a > img{
+    width: 100%; height: 100%; transition: all .5s;
+}
+.main_footer > .footer_menu > .sns > .sns_list > li > a > img:hover{
+    transform: scale(1.1);
+}
+.main_footer > .footer_menu > .sns > .sns_list > li{
+    width: 6%; height: 6%; object-fit: cover; padding-bottom: 3%;
+}
+
+@media screen and (min-width:800px){
+    .main_header{
+        height: 180px; 
+    }
+    .main_header > h1{
+        top: 10px;
+    }
+    .main_header > h1 > a{
+        width: 80px; height: 80px; 
+    }
+    .main_header > .toggle_btn{    display: none !important;  }
+    .main_header > .gnb{
+        left: 50%; transform: translateX(-50%); top: 30%; width: 100%;   height: auto;   background-color: transparent;  
+        text-align: center;
+    }
+    .main_header > .gnb > h2{ display: none; }
+    .main_header > .gnb > ul{    flex-direction: row;   gap:5%;  justify-content: center;  }
+    .main_header > .gnb > ul > li{    position: relative;           }
+    .main_header > .gnb > ul > li > a{    color: #001838; font-weight: 600; font-size: 18px;   }
+    .main_header > .gnb > .closeBtn{    display: none;  }
+
+    .matches{
+        height: 100%;
+    }
+    .matches > .k2 > .swiper-wrapper{
+        height: 520px; 
+    }
+    .matches > .k2 > .swiper-wrapper .swiper-slide{
+        width: 35%;
+    }
+
+    .news > .news_tab > div > a{
+        font-size: 20px;
+    }
+
+    .trophies > .k4 > .swiper-wrapper > .mm2{
+        width: 60%;
+    }
+    .store > .k3 > .swiper-wrapper > div{
+        width: 60%;
+    }
+
+    .main_footer > .main_sponsor > li{
+        width: 20%;
+    }
+    .main_footer > .sub_sponsor > li{
+        width: 15%;
+    }
+    .main_footer > .footer_menu > .sns > .sns_list > li{
+        width: 3%; height: 3%;
+    }
+
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1{
+        font-family: "Bebas Neue", sans-serif; font-size: 25px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > img{
+        width: 80px; height: 80px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p2 > img{
+        width: 100px; height: 100px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .day{
+        font-size: 40px;
+    }
+    .store > .k3 > .swiper-wrapper > .mm > a{
+        font-size: 25px;
+    }
+    .store{
+        padding-bottom: 5%;
+    }
+
+    .trophies > .k4 > .swiper-wrapper > .mm2 > .league{
+        font-size: 40px;
+    }
+    .trophies > .k4 > .swiper-wrapper > .mm2 > .num{
+        font-size: 40px;
+    }
+
+    .matches > h2{
+        font-size: 25px;
+    }
+    .news > h2{
+        font-size: 25px;
+    }
+    .store > h2{
+        font-size: 25px;
+    }
+    .trophies > h2{
+        font-size: 25px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .vs{
+        padding-right: 20px;
+    }
+
+}
+@media screen and (min-width:1200px){
+
+    .matches{
+        height: 100%;
+    }
+    .matches > .k2 > .swiper-wrapper .swiper-slide{
+        width: 30%;
+    }
+    .news > .news_tab > div > a{
+        font-size: 24px; word-wrap: break-word; text-overflow: ellipsis;
+    }
+    .matches > h2{
+        font-size: 30px;
+    }
+    .news > h2{
+        font-size: 30px;
+    }
+    .store > h2{
+        font-size: 30px;
+    }
+    .trophies > h2{
+        font-size: 30px;
+    }
+    .trophies > .k4 > .swiper-wrapper > .mm2{
+        width: 40%;
+    }
+    .main_footer > .main_sponsor > li{
+        width: 15%;
+    }
+    .main_footer > .sub_sponsor > li{
+        width: 13%;
+    }
+    .main_footer > .footer_menu > ul{
+        width: 20%;
+    }
+    .main_footer > .footer_menu > .bottom{
+        padding-top: 0;
+    }
+    .main_footer > .footer_menu{
+        gap: 5%; justify-content: center;
+    }
+
+    .matches > .k2 > .swiper-wrapper{
+        height: 800px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1{
+        font-family: "Bebas Neue", sans-serif; font-size: 25px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > img{
+        width: 100px; height: 100px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p2 > img{
+        width: 120px; height: 120px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .day{
+        font-size: 40px;
+    }
+    .matches > .k2 > .swiper-wrapper > .swiper-slide > .p1 > .vs{
+        padding-right: 30px;
+    }
+    .store > .k3 > .swiper-wrapper > .mm > a{
+        font-size: 30px;
+    }
+    .store{
+        padding-bottom: 5%;
+    }
+
+    .trophies > .k4 > .swiper-wrapper > .mm2 > .league{
+        font-size: 50px;
+    }
+    .trophies > .k4 > .swiper-wrapper > .mm2 > .num{
+        font-size: 50px;
+    }
+
+    .main_footer > .footer_menu > .sns > .sns_list > li{
+        width: 2%; height: 2%;
+    }
+}
